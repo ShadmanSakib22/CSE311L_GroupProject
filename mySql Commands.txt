@@ -1,0 +1,10 @@
+user_db : databse
+user_form : table
+
+CREATE DATABASE user_db;
+
+CREATE TABLE user_form (
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL PRIMARY KEY,
+);
