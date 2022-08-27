@@ -1,0 +1,139 @@
+body {
+    font-family: sans-serif;
+    padding-left: 180px;
+    background-image: url('image/admin.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+.sidenav {
+
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #181918;
+    overflow: hidden;
+    opacity: 0.7;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sidenav a {
+    float: down;
+    display: block;
+    color: yellowgreen;
+    background-color: #232325;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #aaaaaa;
+    border-bottom: 2px solid #aaaaaa;
+    border-left: 8px solid #ffffff;
+}
+
+.sidenav b {
+    float: down;
+    display: block;
+    color: #333;
+    background-color: yellowgreen;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #aaaaaa;
+    border-bottom: 2px solid #aaaaaa;
+    border-left: 8px solid #ffffff;
+}
+
+.sidenav a:hover {
+    color: #333;
+    background-color: yellowgreen;
+}
+
+.logo {
+    position: fixed;
+    padding: 0px;
+    background: transparent;
+    overflow: hidden;
+    padding-left: 30px;
+}
+
+.header {
+    color: yellowgreen;
+    background-color: #232325;
+    opacity: 0.85;
+    width: 1000px;
+    margin-left: 5%;
+    padding: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header h3 {
+    font-size: 18px;
+    color: #ddd;
+    font-style: italic;
+}
+
+.main {
+
+    color: black;
+    margin-left: 5%;
+    background-color: #96D4D4;
+    opacity: 0.85;
+    text-align: center;
+    padding: 4px;
+    font: 18px sans-serif;
+    width: 1000px;
+}
+
+.main form {
+
+    font-size: 18px;
+    padding: 4px;
+    margin: auto;
+    width: 1000px;
+}
+
+.main h2 {
+    color: #ddd;
+}
+
+.scrollBox {
+    font: 18px sans-serif;
+    color: #333;
+    width: 1000px;
+    height: 400px;
+    overflow-y: auto;
+    margin-left: 5%;
+    background-color: #96D4D4;
+    opacity: 0.85;
+    text-align: left;
+    padding: 4px;
+}
+
+.table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.th,
+td {
+    background-color: #fff;
+    padding: 5px;
+}

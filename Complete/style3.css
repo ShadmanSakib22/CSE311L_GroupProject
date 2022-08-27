@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    padding-left: 180px;
+    background-image: url('image/user.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #181918;
+    overflow: hidden;
+    opacity: 0.7;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sidenav a {
+    float: down;
+    display: block;
+    color: yellowgreen;
+    background-color: #232325;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #aaaaaa;
+    border-bottom: 2px solid #aaaaaa;
+    border-left: 8px solid #ffffff;
+}
+
+.sidenav b {
+    float: down;
+    display: block;
+    color: #333;
+    background-color: yellowgreen;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #aaaaaa;
+    border-bottom: 2px solid #aaaaaa;
+    border-left: 8px solid #ffffff;
+}
+
+.sidenav a:hover {
+    color: #333;
+    background-color: yellowgreen;
+}
+
+.logo {
+    position: fixed;
+    padding: 0px;
+    background: transparent;
+    overflow: hidden;
+    padding-left: 30px;
+}
+
+.header {
+    color: yellowgreen;
+    background-color: #232325;
+    opacity: 0.85;
+    width: 800px;
+
+    margin: auto;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+.header h3 {
+    font-size: 18px;
+    color: #ddd;
+    font-style: italic;
+}
+
+.main {
+
+    background-color: #232325;
+    color: yellowgreen;
+    width: 710px;
+    margin: auto;
+    padding: 4px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.main h2 {
+    color: #ddd;
+}
+
+.main h4 {
+    color: yellowgreen;
+}
+
+.main p {
+    color: #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+
+.footer {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #232325;
+    color: #fff;
+    text-align: center;
+}

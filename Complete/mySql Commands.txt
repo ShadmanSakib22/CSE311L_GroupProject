@@ -1,0 +1,17 @@
+user_db : databse
+user_form : table
+
+CREATE DATABASE user_db;
+
+CREATE TABLE user_form (
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL PRIMARY KEY,
+);
+
+CREATE TABLE comments(cid int(11) PRIMARY KEY AUTO_INCREMENT, 
+name varchar(50) not null, 
+msg text(300) NOT null, 
+dtime datetime not null,
+UNIQUE noSpam(`name`, `msg`));
+
