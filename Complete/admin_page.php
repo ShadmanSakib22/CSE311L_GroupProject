@@ -39,6 +39,8 @@ if (isset($_POST['promote'])) {
       header('location:admin_page.php');
    }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -127,6 +129,7 @@ if (isset($_POST['promote'])) {
       </form>
       <br>
    </div>
+
    <div class="header">
       <h1>Promote User:</h1>
    </div>
@@ -137,6 +140,71 @@ if (isset($_POST['promote'])) {
          <input type="text" name='proName' required placeholder="enter user name to promote" size="50" style="font-size:20px;">
          <button size='50' style="font-size:20px;" type="submit" name="promote">Promote</button>
       </form>
+      <br>
+   </div>
+
+   <div class="header">
+      <h1>View Comment Stats:</h1>
+   </div>
+   <div class="main">
+      <p><b>To view Users who commented on a Chapter, type out the table name.</b></p>
+      <p><i style="font-size: 15px;">ex. comments1, ..., comments10_5, ..., so on.</i></p>
+      <form action="" method="POST">
+         <input type="text" name='vName' required placeholder="enter table name to view" size="50" style="font-size:20px;">
+         <button size='50' style="font-size:20px;" type="submit" name="view">View</button>
+      </form>
+      <div style="font-size:20px; text-align: left; padding: 4px;">
+         <?php
+         //view Users who commented on a Chapter
+         if (isset($_POST['view'])) {
+            $vName = $_POST['vName'];
+            $sql = "SELECT COUNT(msg) AS total_comment, name FROM $vName GROUP BY name;";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+               echo "<br>";
+               echo '<b>';
+               echo $row["name"] . " ----> ";
+               echo $row["total_comment"];
+               echo '</b>';
+            }
+         }
+         ?>
+      </div>
+      <br>
+   </div>
+   <div class="header">
+      <h1>Specific User Activity:</h1>
+   </div>
+   <div class="main">
+      <p><b>To view email and last activity time of user, type out the table name and user name.</b></p>
+      <p><i style="font-size: 15px;">ex. comments1 & toast, ..so on.</i></p>
+      <form action="" method="POST">
+         <input type="text" name='tName' required placeholder="enter table name..." size="50" style="font-size:20px;">
+         <br>
+         <input type="text" name='uName' required placeholder="enter user name to view" size="50" style="font-size:20px;">
+         <br>
+         <button size='50' style="font-size:20px;" type="submit" name="lview">View</button>
+      </form>
+      <div style="font-size:20px; text-align: left; padding: 4px;">
+         <?php
+         //view Users who commented on a Chapter
+         if (isset($_POST['lview'])) {
+            $tName = $_POST['tName'];
+            $uName = $_POST['uName'];
+            $sql = "SELECT email, dtime FROM user_form JOIN $tName on user_form.name = $tName.name 
+            WHERE user_form.name='$uName' AND dtime >= ALL(SELECT dtime FROM $tName WHERE name='$uName' GROUP by name ORDER by dtime asc)
+            GROUP by email ";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+               echo "<br>";
+               echo '<b>';
+               echo $row["email"] . " ----> ";
+               echo $row["dtime"];
+               echo '</b>';
+            }
+         }
+         ?>
+      </div>
       <br>
    </div>
 
